@@ -1,0 +1,21 @@
+.row{
+    display: flex;
+}
+.calculator{
+    width: max-content;
+    margin: 20px auto;
+}
+.row button{
+    flex: 1;
+    padding: 20px;
+    margin: 5px;
+    font-size: 20px;
+}
+#display{
+    padding: 50px;
+    margin: 5px;
+    height: 50px;
+    font-size: 24px;
+    text-align: right;   
+}
+

@@ -34,6 +34,31 @@ function splitEquation(inp){
     return {num1, operator, num2}
 }
 
+function operate(num1,operator,num2){
+    if (operator === "+"){
+        return add(num1,num2)
+    }
+    else if (operator === "-"){
+        return subtract(num1,num2)
+    }
+    else if (operator === "/"){
+        return divide(num1,num2)
+    }
+    else {
+        return multiply(num1,num2)
+    }
+}
 
 
-console.log(splitEquation("2/1"))
+const digitButtons = document.querySelectorAll(".digit")
+const display = document.querySelector("#display")
+
+digitButtons.forEach(button => {
+    button.addEventListener("click", () => {
+        const digitContent = button.textContent.trim()
+        display.value += digitContent
+        const result = display.value
+        // console.log(result)
+    })
+})
+
